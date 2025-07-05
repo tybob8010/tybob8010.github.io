@@ -1,0 +1,67 @@
+.menu-bar {
+    background: rgb(0, 0, 0);
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu-bar img {
+    height: 40px; /* 画像の高さを固定 */
+    width: auto;
+    object-fit: contain;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap; /* 回り込み防止 */
+    margin-left: 24px;
+}
+
+.menu-bar li {
+    margin: 0 20px;
+    white-space: nowrap; /* 文字の回り込み防止 */
+}
+
+.menu-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-bar a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .menu-bar img {
+        height: 28px;
+        margin-left: 8px;
+    }
+    .menu-bar ul {
+        margin-left: 8px;
+    }
+    .menu-bar li {
+        margin: 0 10px;
+    }
+    .menu-bar a {
+        font-size: 14px;
+    }
+}
+
+.title{
+    margin-top: 60px; /* メニューバーの高さ分の余白を追加 */
+    padding: 20px;
+    color: #ff0000;
+}
