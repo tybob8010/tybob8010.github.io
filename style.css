@@ -1,0 +1,87 @@
+/* Orteil氏のような見た目のための一般的なボディスタイル */
+body {
+    font-family: 'DotGothic16', sans-serif; /* 「ゲームっぽい」フォント */
+    background: rgba(0, 0, 0, 0.777); /* 暗い背景色 */
+    color: #ffffff; /* 明るい文字色 */
+    margin: 0;
+    padding-top: 60px; /* 固定メニューバーのための余白 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="rgba(255,255,255,0.02)"/><path d="M0,0 L10,10 M10,0 L0,10" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>'); /* 微妙なテクスチャ */
+}
+
+/* メインコンテンツのスタイル */
+.title {
+    padding: 0px;
+    color: #FFEE00; 
+    text-align: center;
+    font-family: 'Press Start 2P', cursive; /* タイトル用のピクセルフォント */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 微妙な影 */
+}
+
+.title h1 {
+    font-size: 0em; /* タイトルをより目立たせる */
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    max-width: 400px; /* コンテンツの幅を制限 */
+    margin: 20px auto; /* コンテンツを中央に配置 */
+    background-color: rgba(0, 238, 0, 0.25); /* コンテンツの半透明な背景色 */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+.content p {
+    margin-bottom: 1em;
+}
+
+.content a {
+    color: #FFEE00; /* リンクの色 */
+    text-decoration: none;
+    border-bottom: 1px dashed #FFEE00; /* Orteil氏はよく破線の下線を使う */
+}
+
+.content a:hover {
+    color: #ff9900;
+    border-bottom: 1px solid #ff9900;
+}
+.links {
+    padding: 20px;
+    max-width: 400px; /* コンテンツの幅を制限 */
+    margin: 20px auto; /* コンテンツを中央に配置 */
+    background-color: rgba(0, 0, 0, 0.6); /* コンテンツの半透明な背景色 */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+.links p {
+    margin-bottom: 1em;
+}
+
+.links a {
+    color: #FFEE00; /* リンクの色 */
+    text-decoration: none;
+    border-bottom: 1px dashed #FFEE00; /* Orteil氏はよく破線の下線を使う */
+}
+
+.links a:hover {
+    color: #ff9900;
+    border-bottom: 1px solid #ff9900;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: #ffffff; /* リンクの色 */
+    text-decoration: none;
+    border-bottom: 1px dashed #ffffff; /* Orteil氏はよく破線の下線を使う */
+}
+
+.footer a:hover {
+    color: #ff9900;
+    border-bottom: 1px solid #ff9900;
+}
