@@ -1,11 +1,28 @@
 /* Orteil氏のような見た目のための一般的なボディスタイル */
 body {
     font-family: 'DotGothic16', sans-serif; /* 「ゲームっぽい」フォント */
-    background: rgba(0, 0, 0, 0.777); /* 暗い背景色 */
+    background: rgba(0, 0, 0, 0.7); /* 暗い背景色 */
     color: #ffffff; /* 明るい文字色 */
     margin: 0;
     padding-top: 60px; /* 固定メニューバーのための余白 */
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="rgba(255,255,255,0.02)"/><path d="M0,0 L10,10 M10,0 L0,10" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>'); /* 微妙なテクスチャ */
+}
+
+.header {
+    text-align: right;
+    padding-right: 40px;
+    /*padding-top: 10px;*/
+}
+
+.header a {
+    color: #ffffff; /* リンクの色 */
+    text-decoration: none;
+    border-bottom: 1px dashed #ffffff; /* Orteil氏はよく破線の下線を使う */
+}
+
+.header a:hover {
+    color: #ff9900;
+    border-bottom: 1px solid #ff9900;
 }
 
 /* メインコンテンツのスタイル */
