@@ -3,51 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <title>tybob</title>
-    <link rel="icon" type="image/png" href="photo/bird2.png"><link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="photo/bird2.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="visibility: hidden;">
     <script>
         const isError = false; // 調整時のみtrue
 
         if (isError) {
-            window.location.href = "https://tybob8010.github.io/error_en";
+            window.location.href = "https://tybob8010.github.io/error";
         }
     </script>
-    
+
     <div class="header">
-        <p><a href="https://tybob8010.github.io">en</a> / <a href="https://tybob8010.github.io/ja">ja</a></p>
+        <p><a href="#" id="lang-en">en</a> / <a href="#" id="lang-ja">ja</a></p>
     </div>
-    <div class="content">
-        <div class="title">
-            <h2>About me</h2>
+    <div class="lang-ja">
+        <div class="content">
+            <div class="title">
+                <h2>tybobについて</h2>
+            </div>
+            <p>ようこそtybobのホームページへ。</p>
+            <p>このページは現在調整中です。</p>
+            <p>I'm always baking cookies.🍪</p>
         </div>
-        <p>Welcome to my homepage.</p>
-        <p>This page is under maintenace now.</p>
-        <p>I'm always baking cookies.🍪</p>
+
+        <div class="content">
+            <div class="title">
+                <h2>製作物</h2>
+            </div>
+            <p>私はこれらのものを作りました。</p>
+            <p>・<a href="https://tybob8010.github.io/dotmaker/">dotmaker</a></p>
+        </div>
+
+        <div class="links">
+            <div class="title">
+                <h2>リンク</h2>
+            </div>
+            <p><img src="photo/logo-white.png" width="5%"> <a href="https://x.com/tybob8010">X(Twitter)</a></p>
+            <p><img src="photo/Discord-Symbol-Blurple.png" width="5%"> <a href="#">Discord</a>(準備中)</p>
+            <p><img src="photo/github-mark-white.png" width="5%"> <a href="https://github.com/tybob8010">Github</a></p>
+            <p><img src="photo/icon.png" width="5%"> <a href="https://note.com/tybob8010">note</a></p>
+        </div>
     </div>
 
-    <div class="content">
-        <div class="title">
-            <h2>Tools</h2>
+    <div class="lang-en">
+        <div class="content">
+            <div class="title">
+                <h2>About me</h2>
+            </div>
+            <p>Welcome to my homepage.</p>
+            <p>This page is under maintenace now.</p>
+            <p>I'm always baking cookies.🍪</p>
         </div>
-        <p>I created these tools.</p>
-        <p>・<a href="https://tybob8010.github.io/dotmaker/">dotmaker</a>.</p>
-    </div>
-    <div class="links">
-        <div class="title">
-            <h2>Links</h2>
+
+        <div class="content">
+            <div class="title">
+                <h2>Tools</h2>
+            </div>
+            <p>I created these tools.</p>
+            <p>・<a href="https://tybob8010.github.io/dotmaker/">dotmaker</a></p>
         </div>
-        <p><img src="photo/logo-white.png" width="5%"> <a href="https://x.com/tybob8010">X(Twitter)</a></p>
-        <p><img src="photo/Discord-Symbol-Blurple.png" width="5%"> <a href="#">Discord</a>(preparing now.)</p>
-        <p><img src="photo/github-mark-white.png" width="5%"> <a href="https://github.com/tybob8010">Github</a></p>
-        <p><img src="photo/icon.png" width="5%"> <a href="https://note.com/tybob8010">note</a></p>
+
+        <div class="links">
+            <div class="title">
+                <h2>Links</h2>
+            </div>
+            <p><img src="photo/logo-white.png" width="5%"> <a href="https://x.com/tybob8010">X(Twitter)</a></p>
+            <p><img src="photo/Discord-Symbol-Blurple.png" width="5%"> <a href="#">Discord</a>(preparing now.)</p>
+            <p><img src="photo/github-mark-white.png" width="5%"> <a href="https://github.com/tybob8010">Github</a></p>
+            <p><img src="photo/icon.png" width="5%"> <a href="https://note.com/tybob8010">note</a></p>
+        </div>
     </div>
-    
+
     <div class="footer">
-        <p>© 2025 <a href="https://tybob8010.github.io">tybob</a> <a href="https://tybob8010.github.io/privacypolicy_en">Privacy Policy</a> <a href="https://tybob8010.github.io/termsofservice_en">Terms of Service</a></p>
+        <div class="lang-ja">
+            <p>© 2025 <a href="https://tybob8010.github.io">tybob</a> <a href="https://tybob8010.github.io/privacypolicy">プライバシーポリシー</a> <a href="https://tybob8010.github.io/termsofservice">利用規約</a></p>
+        </div>
+        <div class="lang-en">
+            <p>© 2025 <a href="https://tybob8010.github.io">tybob</a> <a href="https://tybob8010.github.io/privacypolicy">Privacy Policy</a> <a href="https://tybob8010.github.io/termsofservice">Terms of Service</a></p>
+        </div>
     </div>
+    <script>
+        // この部分は、単一のページに含める
+        const langJaElements = document.querySelectorAll('.lang-ja');
+        const langEnElements = document.querySelectorAll('.lang-en');
+
+        const titles = {
+            'ja': 'tybob',
+            'en': 'tybob'
+        };
+
+        function setLang(lang) {
+            langJaElements.forEach(el => el.style.display = lang === 'ja' ? 'block' : 'none');
+            langEnElements.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+            document.documentElement.lang = lang;
+            document.body.className = `lang-${lang}`;
+            
+            document.title = titles[lang];
+            
+            localStorage.setItem('lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedLang = localStorage.getItem('lang');
+            let currentLang;
+            if (storedLang) {
+                currentLang = storedLang;
+            } else {
+                currentLang = navigator.language.startsWith('ja') ? 'ja' : 'en';
+            }
+            
+            setLang(currentLang);
+            document.body.style.visibility = 'visible';
+
+            document.getElementById('lang-en').addEventListener('click', (e) => {
+                e.preventDefault();
+                setLang('en');
+            });
+
+            document.getElementById('lang-ja').addEventListener('click', (e) => {
+                e.preventDefault();
+                setLang('ja');
+            });
+        });
+    </script>
 </body>
 </html>
