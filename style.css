@@ -7,61 +7,35 @@ body {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="rgba(255,255,255,0.02)"/><path d="M0,0 L10,10 M10,0 L0,10" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
 }
 
-.header {
-    text-align: right;
-    padding-right: 40px;
-}
-
-.header a {
-    color: #ffffff;
-    text-decoration: none;
-    border-bottom: 1px dashed #ffffff;
-}
-
-.header a:hover {
-    color: #ff9900;
-    border-bottom: 1px solid #ff9900;
-}
-
-/* リンクとコンテンツのスタイル */
-.content a, .links a {
-    color: #FFEE00;
-    text-decoration: none;
-    border-bottom: 1px dashed #FFEE00;
-}
-
-.content a:hover, .links a:hover {
-    color: #ff9900;
-    border-bottom: 1px solid #ff9900;
-}
-
-/* タイトルとフォントのスタイル */
-.title {
-    padding: 0px;
-    color: #FFEE00;
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.title h1 {
-    font-size: 0em; /* タイトルをより目立たせる（この設定は確認が必要です。0emだと非表示になります） */
-    margin: 0;
-}
-
+/*タイトルフォント*/
 /* 英語版タイトルのフォントを上書き（lang-enクラス使用時） */
 body.lang-en .title {
     font-family: 'Press Start 2P', cursive;
     color: #FFEE00; /* Orteil氏のスタイルに合わせる */
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+body.lang-en .subtitle {
+    font-family: 'DotGothic16', cursive;
+    color: #FFEE00; /* Orteil氏のスタイルに合わせる */
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 body.lang-ja .title {
     font-family: 'DotGothic16', cursive;
     color: #FFEE00; /* Orteil氏のスタイルに合わせる */
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+body.lang-ja .subtitle {
+    font-family: 'DotGothic16', cursive;
+    color: #FFEE00; /* Orteil氏のスタイルに合わせる */
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
 /* メインコンテンツのスタイル */
 .content {
@@ -90,6 +64,35 @@ body.lang-ja .title {
 
 .links p {
     margin-bottom: 1em;
+}
+
+/* リンクとコンテンツのスタイル */
+.content a, .links a {
+    color: #FFEE00;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFEE00;
+}
+
+.content a:hover, .links a:hover {
+    color: #ff9900;
+    border-bottom: 1px solid #ff9900;
+}
+
+/*ヘッダーとフッターのフォント*/
+.header {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffffff;
+}
+
+.header a:hover {
+    color: #ff9900;
+    border-bottom: 1px solid #ff9900;
 }
 
 .footer {
