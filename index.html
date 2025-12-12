@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>tybob</title>
-    <link rel="icon" type="image/png" href="photo/bird2.png">
+    <link id="favicon" rel="icon" type="image/png" href="photo/bird2.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
+        <!-- ▼ 日付でファビコン切り替え -->
+    <script>
+        (function () {
+            const today = new Date();
+            const month = today.getMonth() + 1; // 1〜12
+            const day = today.getDate();       // 1〜31
+            
+            const favicon = document.getElementById('favicon');
+
+            // 12/1〜12/25 の期間だけクリスマス版に切り替え
+            const isChristmas = (month === 12 && day >= 1 && day <= 25);
+
+            if (isChristmas) {
+                favicon.href = "photo/bird_xmas_506px.png";
+            } else {
+                favicon.href = "photo/bird2.png";
+            }
+        })();
+    </script>
 </head>
 <body style="visibility: hidden;">
     <script>
