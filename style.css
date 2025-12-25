@@ -19,7 +19,7 @@ body.lang-en .title {
 body.lang-en .subtitle {
     font-family: 'DotGothic16', cursive;
     color: #FFEE00; /* Orteil氏のスタイルに合わせる */
-    text-align: middle;
+    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -33,7 +33,7 @@ body.lang-ja .title {
 body.lang-ja .subtitle {
     font-family: 'DotGothic16', cursive;
     color: #FFEE00; /* Orteil氏のスタイルに合わせる */
-    text-align: middle;
+    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -110,4 +110,5 @@ body.lang-ja .subtitle {
     border-bottom: 1px solid #ff9900;
 
 }
+
 
