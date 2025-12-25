@@ -40,7 +40,7 @@ body.lang-ja .subtitle {
 /* メインコンテンツのスタイル */
 .content {
     padding: 20px;
-    max-width: 400px;
+    max-width: 800px;
     margin: 20px auto;
     background-color: rgba(0, 238, 0, 0.25);
     border-radius: 8px;
@@ -108,4 +108,5 @@ body.lang-ja .subtitle {
 .footer a:hover {
     color: #ff9900;
     border-bottom: 1px solid #ff9900;
+
 }
