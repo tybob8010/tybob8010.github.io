@@ -1,4 +1,4 @@
-/* Orteil氏のような見た目のための一般的なボディスタイル */
+/*背景等body*/
 body {
     font-family: 'DotGothic16', sans-serif;
     background: rgba(0, 0, 0, 0.7);
@@ -11,25 +11,25 @@ body {
 /* 英語版タイトルのフォントを上書き（lang-enクラス使用時） */
 body.lang-en .title {
     font-family: 'Press Start 2P', cursive;
-    color: #FFEE00; /* Orteil氏のスタイルに合わせる */
+    color: #FFEE00;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
+/*サブタイトル英語*/
 body.lang-en .subtitle {
     font-family: 'DotGothic16', cursive;
-    color: #FFEE00; /* Orteil氏のスタイルに合わせる */
+    color: #FFEE00;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
+/*タイトル日本語*/
 body.lang-ja .title {
     font-family: 'DotGothic16', cursive;
     color: #FFEE00; /* Orteil氏のスタイルに合わせる */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
+/*サブタイトル日本語*/
 body.lang-ja .subtitle {
     font-family: 'DotGothic16', cursive;
     color: #FFEE00; /* Orteil氏のスタイルに合わせる */
@@ -46,12 +46,14 @@ body.lang-ja .subtitle {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     line-height: 1.6;
+    text-align: center;
 }
 
 .content p {
     margin-bottom: 1em;
+    text-align: center;
 }
-
+/*リンクのスタイル*/
 .links {
     padding: 20px;
     max-width: 800px;
@@ -60,13 +62,15 @@ body.lang-ja .subtitle {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     line-height: 1.6;
+    text-align: center;
 }
 
 .links p {
     margin-bottom: 1em;
+    text-align: center;
 }
 
-/* リンクとコンテンツのスタイル */
+/* カーソルホバーしたときの変化 */
 .content a, .links a {
     color: #FFEE00;
     text-decoration: none;
@@ -110,5 +114,6 @@ body.lang-ja .subtitle {
     border-bottom: 1px solid #ff9900;
 
 }
+
 
 
