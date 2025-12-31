@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>tybob</title>
+<link id="favicon" rel="icon" type="image/png" href="photo/bird2.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
+<script>
+(function () {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
+    const favicon = document.getElementById('favicon');
+    const isChristmas = (month === 12 && day >= 1 && day <= 25);
+    favicon.href = isChristmas ? "photo/bird_xmas_506px.png" : "photo/bird2.png";
+    document.querySelectorAll("p").forEach(p => {
+    p.innerHTML = p.innerHTML.replace("{year}", year);
+    });
+})();
+</script>
+</head>
+<body style="visibility: hidden;">
+
+<div class="header">
+    <p><a href="#" id="lang-en">en</a> / <a href="#" id="lang-ja">ja</a></p>
+</div>
+
+<div class="lang-ja">
+    <div class="content-grid">
+        <div class="content about">
+            <div class="title"><h2>tybobについて</h2></div>
+            <p>ようこそtybobのホームページへ。</p>
+            <div class="subtitle"><h3>好きなもの</h3></div>
+            <h3>・洋画</h3>
+            <p>コマンドーが一番好き</p>
+            <p>俳優はシュワちゃん、ステイサムが好き</p>
+            <h3>・GAME</h3>
+            <p>あんまりゲームはやらないけど、</p>
+            <p><a href="https://orteil.dashnet.org/cookieclicker">CookieClicker</a>だけはやってる。</p>
+            <p>↑↑↑↑↑絶対やった方がいい</p>
+            <div class="subtitle"><h3>～I'm always baking cookies.🍪～</h3></div>
+        </div>
+
+        <div class="content works">
+            <div class="title"><h2>作ったもの</h2></div>
+            <p>こんなものを作りました。</p>
+            <h3>サイト</h3>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/dotmaker/">dotmaker</a></p></div>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/colorcode/">カラーコードビューワー</a></p></div>
+            <h3>拡張機能</h3>
+            <div class="subtitle"><p>・<a href="https://github.com/tybob8010/TimeViewer">Timeviwer</a></p></div>
+            <h3>ゲーム</h3>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/langton-s-ant/">ラングトンのアリ</a></p></div>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/lifegame/">ライフゲーム</a></p></div>
+            <p>ほかのものも見たかったら私のGitHubまで。</p>
+        </div>
+
+        <div class="links-box links-column">
+            <div class="title"><h2>リンク</h2></div>
+            <div><a href="https://x.com/tybob8010"><img src="photo/logo-white.png" width="15">X(Twitter)</a></div>
+            <div><a href="https://discord.gg/PYQr6WN9a3"><img src="photo/Discord-Symbol-Blurple.png" width="15">Discord</a></div>
+            <div><a href="https://github.com/tybob8010"><img src="photo/github-mark-white.png" width="15">Github</a></div>
+            <div><a href="https://note.com/tybob8010"><img src="photo/icon.png" width="15">note</a></div>
+        </div>
+
+        <div class="extra-box links-column">
+            <img src="photo/bird2.png" width="220" style="display: block; margin: 0 auto;">
+        </div>
+    </div>
+</div>
+
+<div class="lang-en">
+    <div class="content-grid">
+        <div class="content about">
+            <div class="title"><h2>About me</h2></div>
+            <p>Welcome to my homepage.</p>
+            <div class="subtitle"><h3>Favorite things</h3></div>
+            <h3>・MOVIE</h3>
+            <p>My favorite movie is COMMANDO(1985).</p>
+            <p>I love Arnold Schwarzenegger and Jason Statham.</p>
+            <h3>・GAME</h3>
+            <p>I don't play video games very much,</p>
+            <p>but I often play only <a href="https://orteil.dashnet.org/cookieclicker">CookieClicker</a></p>
+            <p>You should play this!!!!!↑↑↑↑↑</p>
+            <div class="subtitle"><h3>～I'm always baking cookies.🍪～</h3></div>
+        </div>
+
+        <div class="content works">
+            <div class="title"><h2>Things I've made</h2></div>
+            <p>I created these things.</p>
+            <h3>WebSites</h3>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/dotmaker/">dotmaker</a></p></div>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/colorcode/">Colorcode Viewer</a></p></div>
+            <h3>Extension for Browsers</h3>
+            <div class="subtitle"><p>・<a href="https://github.com/tybob8010/TimeViewer">Timeviwer</a></p></div>
+            <h3>Games</h3>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/langton-s-ant/">Langton's ant</a></p></div>
+            <div class="subtitle"><p>・<a href="https://tybob8010.github.io/lifegame/">LifeGame</a></p></div>
+            <p>If you want to see other things, please visit my GitHub !</p>
+        </div>
+
+        <div class="links-box links-column">
+            <div class="title"><h2>Links</h2></div>
+            <div><a href="https://x.com/tybob8010"><img src="photo/logo-white.png" width="15">X(Twitter)</a></div>
+            <div><a href="https://discord.gg/PYQr6WN9a3"><img src="photo/Discord-Symbol-Blurple.png" width="15">Discord</a></div>
+            <div><a href="https://github.com/tybob8010"><img src="photo/github-mark-white.png" width="15">Github</a></div>
+            <div><a href="https://note.com/tybob8010"><img src="photo/icon.png" width="15">note</a></div>
+        </div>
+
+        <div class="extra-box links-column">
+            <img src="photo/bird2.png" width="220" style="display: block; margin: 0 auto;">
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="lang-ja">
+        <p>© <script>document.write(new Date().getFullYear());</script> <a href="https://tybob8010.github.io">tybob</a> <a href="https://tybob8010.github.io/privacy.html">プライバシーポリシー</a> <a href="https://tybob8010.github.io/terms.html">利用規約</a>
+</p>
+
+
+    </div>
+    <div class="lang-en">
+        <p>© <script>document.write(new Date().getFullYear());</script> <a href="https://tybob8010.github.io">tybob</a> <a href="https://tybob8010.github.io/privacy.html">Privacy Policy</a> <a href="https://tybob8010.github.io/terms.html">Terms of Service</a></p>
+    </div>
+</div>
+
+<script>
+const langJaElements = document.querySelectorAll('.lang-ja');
+const langEnElements = document.querySelectorAll('.lang-en');
+const titles = { 'ja':'tybob', 'en':'tybob' };
+function setLang(lang){
+    langJaElements.forEach(el=>el.style.display=lang==='ja'?'block':'none');
+    langEnElements.forEach(el=>el.style.display=lang==='en'?'block':'none');
+    document.documentElement.lang=lang;
+    document.body.className=`lang-${lang}`;
+    document.title=titles[lang];
+    localStorage.setItem('lang',lang);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+    const storedLang=localStorage.getItem('lang');
+    let currentLang=storedLang?storedLang:(navigator.language.startsWith('ja')?'ja':'en');
+    setLang(currentLang);
+    document.body.style.visibility='visible';
+    document.getElementById('lang-en').addEventListener('click',e=>{e.preventDefault();setLang('en');});
+    document.getElementById('lang-ja').addEventListener('click',e=>{e.preventDefault();setLang('ja');});
+});
+</script>
+</body>
+</html>
