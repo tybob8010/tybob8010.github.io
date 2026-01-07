@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>tybob</title>
-<link id="favicon" rel="icon" type="image/png" href="img/bird2.png">
+<link id="favicon" rel="icon" type="image/png" href="img/bird2_512px_512px_512px_512px.png">
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     const day = today.getDate();
     const favicon = document.getElementById('favicon');
     const isChristmas = (month === 12 && day >= 1 && day <= 25);
-    favicon.href = isChristmas ? "img/bird_xmas_506px.png" : "img/bird2.png";
+    favicon.href = isChristmas ? "img/bird_xmas_506px.png" : "img/bird2_512px_512px_512px_512px.png";
     document.querySelectorAll("p").forEach(p => {
     p.innerHTML = p.innerHTML.replace("{year}", year);
     });
@@ -61,14 +61,14 @@
 
         <div class="links-box links-column">
             <div class="title"><h2>リンク</h2></div>
-            <div><a href="https://x.com/tybob8010"><img src="img/logo-white.png" width="15">X(Twitter)</a></div>
-            <div><a href="https://discord.gg/PYQr6WN9a3"><img src="img/Discord-Symbol-Blurple.png" width="15">Discord</a></div>
-            <div><a href="https://github.com/tybob8010"><img src="img/github-mark-white.png" width="15">Github</a></div>
-            <div><a href="https://note.com/tybob8010"><img src="img/icon.png" width="15">note</a></div>
+            <div><a href="https://x.com/tybob8010"><img src="img/logo/logo-white.png" width="15">X(Twitter)</a></div>
+            <div><a href="https://discord.gg/PYQr6WN9a3"><img src="img/logo/Discord-Symbol-Blurple.png" width="15">Discord</a></div>
+            <div><a href="https://github.com/tybob8010"><img src="img/logo/github-mark-white.png" width="15">Github</a></div>
+            <div><a href="https://note.com/tybob8010"><img src="img/logo/icon.png" width="15">note</a></div>
         </div>
 
         <div class="extra-box links-column">
-            <img src="img/bird2.png" width="220" style="display: block; margin: 0 auto;">
+            <img src="img/bird2_512px.png" width="220" style="display: block; margin: 0 auto;">
         </div>
     </div>
 </div>
@@ -112,7 +112,7 @@
         </div>
 
         <div class="extra-box links-column">
-            <img src="img/bird2.png" width="220" style="display: block; margin: 0 auto;">
+            <img src="img/bird2_512px_512px_512px_512px.png" width="220" style="display: block; margin: 0 auto;">
         </div>
     </div>
 </div>
