@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ドット絵エディタ</title>
+    <link rel="icon" type="image/png" href="../img/bird2_512px.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>ドット絵エディタ</h1>
+
+    <button id="helpMenuBtn" class="help-menu-button">☰ 使い方</button>
+    <div id="helpMenu" class="help-menu">
+        <div class="help-menu-inner">
+            <h2>使い方</h2>
+            <div id="helpMenuContent">
+                    <!-- 使い方の説明セクション -->
+                    <section class="usage">
+                        <ul>
+                            <div class="attention">
+                                <p>注意：縦・横のドット数を大きくしすぎるとフリーズします！縦横ともに300ドット以下を推奨します。</p>
+                                <p>縦横そろえると800ドットが限界。500ドットを超えるとラグくなります。300ドット以下が快適(?)に動くかと思われます</p>
+                                <p>縦か横片方のみを変更すると3000ドットが限界。もう片方は200ドットが限界。</p>
+                            </div>
+                            <li>キャンバス上をクリックすると、その位置のドットに色が塗られます。</li>
+                            <li>「横ドット数」「縦ドット数」でキャンバスの大きさを変更できます。</li>
+                            <li>「リサイズ」ボタンでダウンロード時の1ドットサイズを変更します。</li>
+                            <li>色はHSBまたはRGBで指定できます。スライダーや数値入力で調整してください。</li>
+                            <li>「HSB→RGB」「RGB→HSB」ボタンで色指定を相互変換できます。</li>
+                            <li>「範囲選択」ボタンで範囲選択・移動、「消しゴム」ボタンで消しゴム、「スポイト」ボタンで色取得、何も選択していないときは着色モードです。</li>
+                            <li>「保存形式」でPNG/JPEG/ICOを選び、「保存」ボタンで画像としてダウンロードできます。</li>
+                            <li>「1ドットの大きさ(px)」は保存時の画像の拡大率です（キャンバス表示には影響しません）。</li>
+                            <p>© <script>document.write(new Date().getFullYear());</script> <a href="https://tybob8010.github.io">tybob</a></p>
+                        </ul>
+                    </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- 操作パネル -->
+    <div class="controls">
+        <label>横ドット数: <input type="number" id="cols" value="16" min="1"></label>
+        <label>縦ドット数: <input type="number" id="rows" value="16" min="1"></label>
+        <label>1ドットの大きさ(px): <input type="number" id="pixelSize" value="20" min="1"></label>
+        <button id="resizeBtn">リサイズ</button>
+        <br>
+
+        <!-- 色指定：HSB -->
+        <label>色(HSB): 
+            H <input type="range" id="hue" min="0" max="360" value="0">
+            S <input type="range" id="sat" min="0" max="100" value="100">
+            B <input type="range" id="bri" min="0" max="100" value="100">
+        </label>
+
+        <!-- 色指定：RGB -->
+        <label>色(RGB): 
+            R <input type="number" id="r" min="0" max="255" value="255">
+            G <input type="number" id="g" min="0" max="255" value="0">
+            B <input type="number" id="b" min="0" max="255" value="0">
+        </label>
+
+        <!-- 色変換ボタン -->
+        <button id="hsb2rgb">HSB→RGB</button>
+        <button id="rgb2hsb">RGB→HSB</button>
+        <span id="colorPreview" style="display:inline-block;width:30px;height:30px;vertical-align:middle;"></span>
+
+        <!-- 機能切り替えボタン -->
+        <button id="selectBtn">範囲選択</button>
+        <span id="selectStatus" style="margin-left:8px;color:#00f;"></span>
+        <button id="eraserBtn">消しゴム</button>
+        <span id="eraserStatus" style="margin-left:8px;color:#d00;"></span>
+        <button id="eyedropperBtn">スポイト</button>
+        <span id="eyedropperStatus" style="margin-left:8px;color:#00a;"></span>
+        <button id="fillAllBtn">全体を塗りつぶす</button>
+        <button id="fillSelectionBtn" disabled>選択範囲を塗りつぶす</button>
+        <br>
+
+        <!-- 保存関連 -->
+        <label>保存形式:
+            <select id="fileType">
+                <option value="png">PNG</option>
+                <option value="jpeg">JPEG</option>
+                <option value="ico">ICO</option>
+            </select>
+        </label>
+        <button id="saveBtn">保存</button>
+    </div>
+
+    <!-- カラーパレット -->
+    <div class="palette controls">
+        <span>パレット:</span>
+        <div id="paletteArea" style="display:inline-block;vertical-align:middle;"></div>
+        <button id="addToPaletteBtn">現在の色を追加</button>
+    </div>
+
+    <!-- 画像読み込み機能 -->
+    <div class="image-upload controls">
+        <label>画像を読み込む:
+            <input type="file" id="imageLoader" accept="image/*">
+        </label>
+        <div id="imageInfo" style="font-size:90%;margin-top:4px;"></div>
+        <div id="imageSizeAttention" class="attention"></div>
+    </div>
+
+    <!-- キャンバス -->
+    <canvas id="dotCanvas"></canvas>
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="main.js"></script>
+</body>
+</html>

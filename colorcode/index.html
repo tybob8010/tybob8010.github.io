@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カラーコードビューワー</title>
+    <link rel="icon" type="image/png" href="../img/bird2_512px.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+
+<body class="lang-ja">
+
+<h1 class="title">カラーコードビューワー</h1>
+
+<div class="content">
+    <p>カラーコードの色を表示します。</p>
+
+    <!-- HEX -->
+    <p><b>HEX</b></p>
+    <input id="hexInput" type="text" placeholder="#ff5733" style="width:100%; padding:8px;">
+    <button onclick="copyHex()">コピー</button>
+
+    <!-- RGB -->
+    <p><b>RGB</b></p>
+    R <input type="range" id="rRange" min="0" max="255">
+    <input type="number" id="rInput" min="0" max="255"><br>
+    G <input type="range" id="gRange" min="0" max="255">
+    <input type="number" id="gInput" min="0" max="255"><br>
+    B <input type="range" id="bRange" min="0" max="255">
+    <input type="number" id="bInput" min="0" max="255"><br>
+    <button onclick="copyRGB()">コピー</button>
+
+    <!-- HSB -->
+    <p><b>HSB (HSV)</b></p>
+    H <input type="range" id="hRange" min="0" max="360">
+    <input type="number" id="hInput" min="0" max="360"><br>
+    S <input type="range" id="sRange" min="0" max="100">
+    <input type="number" id="sInput" min="0" max="100"><br>
+    B <input type="range" id="vRange" min="0" max="100">
+    <input type="number" id="vInput" min="0" max="100"><br>
+    <button onclick="copyHSB()">コピー</button>
+
+    <div id="colorDisplay"
+        style="margin-top:20px; width:100%; height:200px;
+        border:2px solid #fff; border-radius:8px; background:#000;"></div>
+
+    <!-- 表示エリア -->
+    <p id="colorCode" style="text-align:center; font-weight:bold; margin-top:10px;">
+        未入力
+    </p>
+
+    <p>
+        例:
+        <a href="#" onclick="setExample('#00ff00')">#00ff00</a> /
+        <a href="#" onclick="setExample('#ff00ff')">#ff00ff</a>
+    </p>
+</div>
+
+<div class="footer">
+    <p>
+        © 2025 <a href="https://tybob8010.github.io">tybob</a>
+        <a href="https://tybob8010.github.io/privacy.html">プライバシーポリシー</a>
+        <a href="https://tybob8010.github.io/terms.html">利用規約</a>
+    </p>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

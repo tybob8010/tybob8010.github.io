@@ -1,0 +1,170 @@
+/* ============================
+   全体（目に優しいダークテーマ）
+============================ */
+body {
+    font-family: 'DotGothic16', sans-serif;
+
+    /* 黒 → ダークグレーへ（目に優しい） */
+    background: #2b2b2b;  
+
+    /* ノイズもかなり薄くして視認性UP */
+    background-image: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">\
+<rect width="10" height="10" fill="rgba(255,255,255,0.01)"/>\
+<path d="M0,0 L10,10 M10,0 L0,10" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>\
+</svg>');
+
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ----------------------------
+   タイトル
+---------------------------- */
+body.lang-en h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFEE00;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+body.lang-ja h1 {
+    font-family: 'DotGothic16', sans-serif;
+    color: #FFEE00;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+/* ============================
+   あなたの UI 部分（色だけ調整）
+============================ */
+.controls {
+    margin-bottom: 10px;
+    background: rgba(50,50,50,0.7);  /* 少し明るい */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.attention {
+    color: #ffbb33; /* オレンジ寄りの警告 → 目に優しい */
+}
+
+/* ============================
+   キャンバス（必ず白）
+============================ */
+canvas {
+    background: #ffffff !important; /* ←絶対白 */
+    border: 1px solid #666;
+    display: block;
+    margin-top: 10px;
+}
+
+/* ============================
+   パレット・ファイルUI
+============================ */
+.image-upload {
+    margin-bottom: 10px;
+}
+
+.image-upload input[type="file"] {
+    display: block;
+    margin-top: 5px;
+}
+
+.palette-color {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #aaa;
+    margin: 2px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* ============================
+   リンク
+============================ */
+a {
+    color: #FFEE00;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFEE00;
+}
+
+a:hover {
+    color: #ff9900;
+    border-bottom: 1px solid #ff9900;
+}
+
+/* 右上のメニューボタン */
+.help-menu-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(60, 60, 60, 0.8);
+    color: #FFEE00;
+    border: 1px solid #777;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: 'DotGothic16', sans-serif;
+}
+.help-menu-button:hover {
+    background: rgba(80, 80, 80, 0.9);
+}
+
+.help-menu-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #444;
+    color: #FFEE00;
+    border: 1px solid #777;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* ドロワー本体 */
+.help-menu-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #444;
+    color: #FFEE00;
+    border: 1px solid #777;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    z-index: 2000;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+/* ドロワー本体 */
+.help-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: rgba(30,30,30,0.95);
+    color: #EEE;
+    transform: translateX(100%);
+    transition: transform 0.25s ease-out;
+    z-index: 1999;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.help-menu.show {
+    transform: translateX(0%);
+}
+
+.help-menu-inner h2 {
+    color: #FFEE00;
+    margin-top: 0;
+}
