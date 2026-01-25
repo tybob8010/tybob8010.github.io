@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background: #0b0014;
+  font-family: "Times New Roman", "MS Mincho", serif;
+  display: flex;
+}
+
+.ui {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  padding: 18px;
+  background: #1b0f2a;
+  color: #fff;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.ui h2 {
+  margin-top: 0;
+  font-size: 18px;
+  border-bottom: 2px solid #5b2b7a;
+  padding-bottom: 5px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+
+input, select, button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  background: #2d1b42;
+  border: 1px solid #5b2b7a;
+  color: white;
+  border-radius: 4px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  font-weight: bold;
+  background: #5b2b7a;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #7b3ba3;
+}
+
+canvas {
+  margin-left: 280px;
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+.disclaimer {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ffffff; /* 文字色を薄く */
+}
+
+.disclaimer p {
+  margin: 4px 0;
+  text-align: center; /* 先ほどの「中央揃え」を活用 */
+}
+#save {
+  background: #5b2b7a;
+}
+
+#saveBanner {
+  background: #3d1d52; /* 少し色を変えて、サブボタン感を出したり */
+  margin-top: 8px;
+}

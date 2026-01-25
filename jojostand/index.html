@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ジョジョスタンドジェネレーター</title>
+  <link rel="icon" type="image/png" href="../img/bird2_512px.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ui">
+  <h2>STAND SETTING</h2>
+
+  <label>背景カラー
+    <select id="bgType">
+      <option value="purple">パープル</option>
+      <option value="blue">ブルー</option>
+      <option value="pink">ピンク</option>
+      <option value="gold">ゴールド</option>
+      <option value="green">グリーン</option>
+      <option value="red">レッド</option>
+      <option value="orange">オレンジ</option>
+      <option value="monochrome">モノクロ</option>
+    </select>
+  </label>
+
+  <label>スタンド名
+    <input id="standName" placeholder="ザ・〇ールド">
+  </label>
+
+  <label>スタンド使い
+    <input id="masterName" placeholder="D〇O">
+  </label>
+
+  <label>スタンド画像
+    <input type="file" id="imageInput">
+  </label>
+
+  <div class="stats">
+    <label>破壊力 <select id="power"></select></label>
+    <label>スピード <select id="speed"></select></label>
+    <label>射程距離 <select id="range"></select></label>
+    <label>持続力 <select id="durability"></select></label>
+    <label>精密動作 <select id="precision"></select></label>
+    <label>成長性 <select id="growth"></select></label>
+  </div>
+
+  <button id="save">PNGで保存 (16:9)</button>
+  <button id="saveBanner">PNGで保存 (1:3)</button>
+
+  <p class="text-center">© <script>document.write(new Date().getFullYear());</script> <a href="https://tybob8010.github.io" style="color: #FFFFFF;">tybob</a></p>
+  <div class="disclaimer">
+    <p>【非公式ファンコンテンツ】</p>
+    <p>本ツールは個人の趣味で制作された非公式のジェネレーターです。</p>
+    <p>「ジョジョの奇妙な冒険」シリーズの権利元（著者・出版社・製作委員会等）とは一切関係ありません。</p>
+    <p>生成された画像は個人利用の範囲でお楽しみください。</p>
+  </div>
+</div>
+
+<canvas id="canvas" width="960" height="540"></canvas>
+
+<script src="main.js"></script>
+</body>
+</html>
