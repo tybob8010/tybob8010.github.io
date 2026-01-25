@@ -11,6 +11,7 @@
 * [カラーコード](https://tybob8010.github.io/colorcode/)
 * [ラングトンのアリ](https://tybob8010.github.io/langton-s-ant)
 * [ライフゲーム](https://tybob8010.github.io/lifegame)
+* [ジョジョスタンドジェネレーター](https://tybob8010.github.io/jojostand)
 
 
 # tybob's HOMEPAGE(ENGLISH) ![](img/bird2.png)
@@ -24,3 +25,4 @@
 * [colorcode](https://tybob8010.github.io/colorcode/)
 * [Langton's Ant](https://tybob8010.github.io/langton-s-ant)
 * [Life Game](https://tybob8010.github.io/lifegame)
+* [JOJO Stands Generator](https://tybob8010.github.io/jojostand)
