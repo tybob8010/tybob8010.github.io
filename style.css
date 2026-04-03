@@ -1,29 +1,102 @@
-/* ===============================
-    body 基本設定
-================================ */
-:root {
-    --text-size: 16px;
-    --line-height: 1.75;       /* about と links の行間統一用 */
-    --links-text-size: 16px;   /* links文字サイズ */
-}
+/*====================================================================================================
+全般
+=====================================================================================================*/
 
 body {
     font-family: 'DotGothic16', sans-serif;
-    font-size: var(--text-size);
-    line-height: var(--line-height);
-    background: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="rgba(255,255,255,0.02)"/><path d="M0,0 L10,10 M10,0 L0,10" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+    background: rgba(0,0,0,0.7);
+    color:#fff;
+    margin:0;
 }
 
-/* ===============================
-    ヘッダー
-================================ */
+/* 言語制御 */
+body.ja .lang-en { display: none; }
+body.ja .cell {
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: auto;
+}
+
+body.en .lang-ja { display: none; }
+
+/* グリッド*/
+.grid{
+    display:grid;
+    width:min(90vw, 90vh);
+    height:min(90vw, 90vh);
+    aspect-ratio:1/1;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(3, 1fr);
+    gap:12px;
+    margin:8px auto;
+}
+
+/* カード */
+.cell{
+    overflow:auto;
+    scrollbar-width: none;
+    padding:16px;
+    border-radius:12px;
+    line-height:1.6;
+    position: relative;
+}
+.cell::-webkit-scrollbar{
+    display:none;
+}
+
+
+/* 色 */
+.green{
+    background:rgba(0,238,0,0.25);
+}
+.black{
+    background:rgba(0,0,0,0.6);
+}
+
+/* extra中央 */
+.extra{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* タイトル */
+.title{
+    color:#FFEE00;
+    text-align:center;
+}
+
+/* リンク*/
+.cell a {
+    color: #FFEE00;
+    text-decoration: none;
+}
+.cell a:hover {
+    color: #ff9900;
+    /* border-bottom: 1px solid #ff9900; */
+}
+
+.link-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.link-text{
+    border-bottom: 1px dashed currentColor;
+}
+
+.link-item:hover .link-text{
+    border-bottom: 1px solid #ff9900;
+}
+
+/*====================================================================================================
+ヘッダーとフッター
+=====================================================================================================*/
+
 .header {
     text-align: right;
-    padding: 6px 16px 4px 0;
+    padding: 2px 12px 2px 0;
     margin: 0;
 }
 .header p { margin: 0; }
@@ -37,180 +110,9 @@ body {
     border-bottom: 1px solid #ff9900;
 }
 
-/* ===============================
-    タイトル系
-================================ */
-body.lang-en .title {
-    font-family: 'Press Start 2P', cursive;
-}
-.title,
-.subtitle {
-    color: #FFEE00;
-    text-align: center;
-    margin: 0.4em 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-h2, h3 { margin: 0.6em 0; }
-
-/* ===============================
-    グリッド
-================================ */
-.content-grid {
-    display: grid;
-    column-gap: 20px;
-    row-gap: 20px;
-    width: min(1200px, 92%);
-    margin: 12px auto 16px;
-}
-.about { grid-area: about; }
-.works { grid-area: works; }
-.links-box { grid-area: links; }
-.extra-box { grid-area: extra; }
-.links-column { display: flex; flex-direction: column; gap: 10px; }
-
-/* ===============================
-    カード共通
-================================ */
-.content,
-.links-box {
-    padding: 24px;
-    border-radius: 12px;
-    line-height: inherit;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
-}
-.extra-box{
-    padding: 24px;
-    border-radius: 12px;
-    line-height: inherit;
-}
-.content { background-color: rgba(0, 238, 0, 0.25); }
-.links-box { background-color: rgba(0, 0, 0, 0.6); }
-.extra-box { background-color: rgba(255, 255, 255, 0); }
-
-/* ===============================
-    テキスト余白
-================================ */
-.content p { 
-    margin: 0.2em 0;
-    line-height: var(--line-height); /* about と同じ行間 */
-}
-
-.links-column {
-    font-size: var(--links-text-size);
-    white-space: nowrap; /* 折り返し防止 */
-}
-
-/* links の p だけ行間を about と同じに */
-.links-column p {
-    margin: 0.2em 0;
-    line-height: var(--line-height); /* about と同じ */
-}
-
-ul { padding-left: 1.2em; margin: 0.2em 0; }
-
-/* ===============================
-    リンク
-================================ */
-.content a,
-.links-column a {
-    color: #FFEE00;
-    text-decoration: none;
-    border-bottom: 1px dashed currentColor;
-}
-.content a:hover,
-.links-column a:hover {
-    color: #ff9900;
-    border-bottom: 1px solid #ff9900;
-}
-
-/* ===============================
-    PC（3列）
-================================ */
-@media (min-width: 901px) {
-    .content-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "about works links"
-            "about works extra";
-        row-gap: 10px; /* linksとextra間の余白 */
-    }
-
-    .about, .works {
-        height: 450px;
-        overflow-y: auto;
-        scrollbar-width: none;
-    }
-
-    /* linksとextraの高さを同じにして、余白込みでabout高さに */
-    .links-box, .extra-box {
-        height: 195px; /* (450px - 10px)/2 */
-        overflow-y: auto;
-        scrollbar-width: none;
-    }
-
-    /*
-    .about::-webkit-scrollbar,
-    .works::-webkit-scrollbar,
-    .links-box::-webkit-scrollbar,
-    .extra-box::-webkit-scrollbar { display: none; }
-    */
-}
-
-/* ===============================
-    タブレット（2列）
-================================ */
-@media (min-width: 601px) and (max-width: 900px) {
-    .content-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "about works"
-            "links extra";
-        row-gap: 20px;
-        column-gap: 20px;
-    }
-
-    .about, .works {
-        height: 450px;
-        overflow-y: auto;
-    }
-
-    .links-box, .extra-box {
-        height: 210px;
-        overflow-y: auto;
-        white-space: nowrap;
-    }
-
-    .about::-webkit-scrollbar,
-    .works::-webkit-scrollbar,
-    .links-box::-webkit-scrollbar,
-    .extra-box::-webkit-scrollbar { display: none; }
-}
-
-/* ===============================
-    スマホ（1列）
-================================ */
-@media (max-width: 600px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "about"
-            "works"
-            "links"
-            "extra";
-    }
-
-    .about, .works, .links-box, .extra-box {
-        height: auto;
-        overflow: visible;
-    }
-}
-
-/* ===============================
-    フッター
-================================ */
 .footer {
     text-align: center;
-    margin: 12px 0 10px;
+    margin:4px 0 4px;
     padding: 0;
     font-size: 0.85em;
 }
@@ -223,11 +125,4 @@ ul { padding-left: 1.2em; margin: 0.2em 0; }
 .footer a:hover {
     color: #ff9900;
     border-bottom: 1px solid #ff9900;
-}
-
-/* ===============================
-    PC情報密度
-================================ */
-@media (min-width: 901px) {
-    body { --text-size: 16px; --line-height: 1.6; }
 }
