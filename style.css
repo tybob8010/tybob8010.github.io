@@ -7,11 +7,15 @@ body {
     background: rgba(0,0,0,0.7);
     color:#fff;
     margin:0;
+    
+    display:flex;
+    flex-direction:column;
+    min-height:98.5vh; 
 }
 
 /* 言語制御 */
 body.ja .lang-en { display: none; }
-body.ja .cell {
+body.ja .card {
     word-break: normal;
     overflow-wrap: break-word;
     line-break: auto;
@@ -22,17 +26,17 @@ body.en .lang-ja { display: none; }
 /* グリッド*/
 .grid{
     display:grid;
-    width:min(90vw, 90vh);
-    height:min(90vw, 90vh);
-    aspect-ratio:1/1;
-    grid-template-columns:repeat(3, 1fr);
+    width:min(90vw, calc(90vh * 5 / 3));
+    min-width: 900;
+    aspect-ratio:5/3;
+    grid-template-columns:repeat(5, 1fr);
     grid-template-rows:repeat(3, 1fr);
     gap:12px;
     margin:8px auto;
 }
 
 /* カード */
-.cell{
+.card{
     overflow:auto;
     scrollbar-width: none;
     padding:16px;
@@ -40,7 +44,7 @@ body.en .lang-ja { display: none; }
     line-height:1.6;
     position: relative;
 }
-.cell::-webkit-scrollbar{
+.card::-webkit-scrollbar{
     display:none;
 }
 
@@ -67,11 +71,11 @@ body.en .lang-ja { display: none; }
 }
 
 /* リンク*/
-.cell a {
+.card a {
     color: #FFEE00;
     text-decoration: none;
 }
-.cell a:hover {
+.card a:hover {
     color: #ff9900;
     /* border-bottom: 1px solid #ff9900; */
 }
@@ -113,6 +117,7 @@ body.en .lang-ja { display: none; }
 .footer {
     text-align: center;
     margin:4px 0 4px;
+    margin-top:auto;
     padding: 0;
     font-size: 0.85em;
 }

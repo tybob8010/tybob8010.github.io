@@ -35,7 +35,7 @@
     <div class="lang-ja">
         <div class="grid">
 
-            <div id="about-ja" class="cell green">
+            <div id="about-ja" class="card green">
                 <div class="title"><h2>tybob8010(ぼぶ)について</h2></div>
                 <p>ようこそtybob8010(ぼぶ)のホームページへ。</p>
                 <div class="subtitle"><h3>好きなもの</h3></div>
@@ -49,7 +49,7 @@
                 <div class="subtitle"><h3>～I'm always baking cookies.🍪～</h3></div>
             </div>
 
-            <div id="works-ja" class="cell green">
+            <div id="works-ja" class="card green">
                 <div class="title"><h2>作ったもの</h2></div>
                 <p>こんなものを作りました。</p>
                 <h3>サイト・ブラウザゲーム</h3>
@@ -67,7 +67,7 @@
                 <p>ほかのものも見たかったら私のGitHubまで。</p>
             </div>
 
-            <div id="links-ja" class="cell black">
+            <div id="links-ja" class="card black">
                 <div class="title"><h2>リンク</h2></div>
                 <p>
                     <a href="https://x.com/tybob8010" class="link-item">
@@ -108,7 +108,7 @@
                 </p>
             </div>
 
-            <div id="extra-ja" class="cell extra">
+            <div id="extra-ja" class="card extra">
                 <img src="img/bird2_512px.png" width="100%">
             </div>
 
@@ -119,7 +119,7 @@
     <div class="lang-en">
         <div class="grid">
 
-            <div id="about-en" class="cell green">
+            <div id="about-en" class="card green">
                 <div class="title"><h2>About me</h2></div>
                 <p>Welcome to my homepage.</p>
                 <div class="subtitle"><h3>Favorite things</h3></div>
@@ -133,7 +133,7 @@
                 <div class="subtitle"><h3>～I'm always baking cookies.🍪～</h3></div>
             </div>
 
-            <div id="works-en" class="cell green">
+            <div id="works-en" class="card green">
                 <div class="title"><h2>Things I've made</h2></div>
                 <p>I created these things.</p>
                 <h3>WebSites & Browser Games</h3>
@@ -151,7 +151,7 @@
                 <p>If you want to see other things, please visit my GitHub !</p>
             </div>
 
-            <div id="links-en" class="cell black">
+            <div id="links-en" class="card black">
                 <div class="title"><h2>Links</h2></div>
                 <p>
                     <a href="https://x.com/tybob8010" class="link-item">
@@ -192,7 +192,7 @@
                 </p>
             </div>
 
-            <div id="extra-en" class="cell extra">
+            <div id="extra-en" class="card extra">
                 <img src="img/bird2_512px.png" width="100%">
             </div>
 
@@ -237,10 +237,15 @@
         }
 
         ["ja","en"].forEach(lang=>{
-            place("about-"+lang,0,0,0,1);
-            place("works-"+lang,1,0,2,1);
-            place("links-"+lang,0,2,1,2);
-            place("extra-"+lang,2,2,2,2);
+            /*
+                [0,0][0,1][0,2][0,3][0,4]
+                [1,0][1,1][1,2][1,3][1,4]
+                [2,0][2,1][2,2][2,3][2,4]
+            */
+            place("about-"+lang,0,1,0,2);
+            place("works-"+lang,1,1,2,2);
+            place("links-"+lang,0,3,1,3);
+            place("extra-"+lang,2,3,2,3);
         });
     </script>
 
